@@ -1,6 +1,11 @@
-const skills = ["juggling", "knife thowing", "card tricks", "tight rope", "beast taming"];
+const skills = ["juggling",
+                "knife thowing",
+                "card tricks",
+                "tight rope",
+                "beast taming"
+                ];
 
-function  getAll(){
+function getAll(){
     return skills;
 }
 
