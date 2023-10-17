@@ -12,7 +12,7 @@
     <ul>
     <% skills.forEach(function(t) { %>
         <li>
-        <%= t %>
+        <a href="/skils/<%= skills.indexOf(t) %>"><%= t %></a>
         </li>
     <% }); %>
     </ul>

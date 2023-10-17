@@ -6,7 +6,7 @@ const skills = ['juggling',
                 ];
 
 module.exports = {
-    getAll
+    getAll, skillAt
 };
 
 function getAll(){
@@ -14,5 +14,6 @@ function getAll(){
 }
 
 function skillAt(idx){
+    idx = parseInt(idx);
     return skills[idx];
 }
