@@ -6,7 +6,7 @@ const skills = ['juggling',
                 ];
 
 module.exports = {
-    getAll, skillAt
+    skills, getAll, skillAt
 };
 
 function getAll(){
