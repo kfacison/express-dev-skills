@@ -1,12 +1,14 @@
-const skills = ['juggling',
-                'knife thowing',
-                'card tricks',
-                'tight rope',
-                'beast taming'
-                ];
+const skills = 
+    [
+    'juggling',
+    'knife thowing',
+    'card tricks',
+    'tight rope',
+    'beast taming'
+    ];
 
 module.exports = {
-    skills, getAll, skillAt
+    skills, getAll, skillAt, addSkill
 };
 
 function getAll(){
@@ -16,4 +18,8 @@ function getAll(){
 function skillAt(idx){
     idx = parseInt(idx);
     return skills[idx];
+}
+
+function addSkill(newSkill){
+    skills.push(newSkill.skill);
 }
