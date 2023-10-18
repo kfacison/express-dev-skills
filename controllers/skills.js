@@ -11,7 +11,8 @@ function index(req, res){
 }
 
 function show(req, res){
+    //console.log(req.params.idx)
     res.render('skills/show',{
-        skill: Skill.skillAt(req.params.index)
+        skill: Skill.skillAt(req.params.idx)
     });
 }
