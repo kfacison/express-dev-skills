@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Document</title>
+    <title>Skill Stats</title>
 </head>
 <body>
     <a href="/">Home</a> | <a href="/skills">Skill List</a>
     <h3><%= skill %></h3>
     <h3>ranking: 10/10</h3>
+    <form action="/skills/<%= idx %>?_method=DELETE" method="post">
+        <button>Delete Skill</button>
+    </form>
 </body>
 </html>
