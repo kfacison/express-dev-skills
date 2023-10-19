@@ -1,7 +1,7 @@
 const Skill = require('../models/skill');
 
 module.exports = {
-    index, show, create,
+    index, show, create, edit, update,
     new: newSkill,
     delete: deleteSkill
 };
@@ -13,7 +13,6 @@ function index(req, res){
 }
 
 function show(req, res){
-    console.log(req.params.idx)
     res.render('skills/show.ejs',{
         skill: Skill.skillAt(req.params.idx),
         idx: req.params.idx
@@ -30,7 +29,19 @@ function create(req, res){
 }
 
 function deleteSkill(req, res){
-    console.log("delete SKill")
     Skill.rmSkill(req.params.idx);
     res.redirect('/skills')
+}
+
+function edit(req, res){
+    res.render('skills/edit', {
+        skill: Skill.skillAt(req.params.idx),
+        idx: req.params.idx
+    });
+}
+
+function update(req, res){
+    console.log(req.body)
+    Skill.update(req.params.idx, req.body.skill);
+    res.redirect(`${req.params.idx}`);
 }

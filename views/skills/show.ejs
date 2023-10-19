@@ -9,6 +9,7 @@
 <body>
     <a href="/">Home</a> | <a href="/skills">Skill List</a>
     <h3><%= skill %></h3>
+    <a href="/skills/<%= idx %>/edit">Edit Skill</a>
     <h3>ranking: 10/10</h3>
     <form action="/skills/<%= idx %>?_method=DELETE" method="post">
         <button>Delete Skill</button>

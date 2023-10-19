@@ -8,7 +8,7 @@ const skills =
     ];
 
 module.exports = {
-    skills, getAll, skillAt, addSkill, rmSkill
+    skills, getAll, skillAt, addSkill, rmSkill, update
 };
 
 function getAll(){
@@ -26,4 +26,9 @@ function addSkill(newSkill){
 
 function rmSkill(idx){
     skills.splice(idx,1);
+}
+
+function update(idx, newInfo){
+    idx = parseInt(idx);
+    skills[idx]= newInfo;
 }
