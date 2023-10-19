@@ -19,7 +19,7 @@ function show(req, res){
 }
 
 function newSkill(req, res){
-    res.render('skills/new.ejs');
+    res.render('skills/new');
 }
 
 function create(req, res){
